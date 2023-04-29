@@ -1,5 +1,3 @@
-import SearchNav from "./components/SearchNav"
-
 function App() {
   return (
     <>
