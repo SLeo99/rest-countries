@@ -12,8 +12,14 @@ function App() {
     document.documentElement.classList.toggle('dark')
   }
 
+  function selectFilterBtn(e) {
+    e.target.nextElementSibling.classList.toggle('hidden')
+    e.target.nextElementSibling.classList.toggle('flex')
+  }
+
   return (
     <div className="w-full dark:bg-darkModeBg transition-colors">
+      
       <header className="bg-lightModeBg py-16 flex justify-center dark:bg-darkBlue transition-colors">
         <div className="mx-6 flex justify-between sm:w-11/12 sm:mx-auto">
           <h2 className="text-lightModeText sm:text-3xl tracking-tight font-semibold dark:text-white transition-colors">Where in the world?</h2>
@@ -28,30 +34,31 @@ function App() {
           </section>
         </div>
       </header>
+
       <section className="w-full flex flex-col items-center my-11">
         <div className="mx-6 flex flex-col sm:w-11/12 sm:mx-auto space-y-20">
           <div className="relative flex flex-row-reverse rounded-md overflow-hidden">
-            <input type="text" name="search" id="search" placeholder="Search for a country..." className="w-full outline-none border-0 py-8 pl-1 text-2xl text-lightModeText bg-darkBlue dark:text-white" />
-            <div className="flex items-center py-6 pl-16 pr-12 bg-darkBlue">
-              <span className="text-white"><BsSearch size={32}/></span>
+            <input type="text" name="search" id="search" placeholder="Search for a country..." className="w-full outline-none border-0 py-8 pl-1 text-2xl text-lightModeText bg-lightModeBg dark:bg-darkBlue dark:text-white transition-colors" />
+            <div className="flex items-center py-6 pl-16 pr-12 bg-lightModeBg dark:bg-darkBlue transition-colors">
+              <span className="text-lightModeText dark:text-white transition-colors"><BsSearch size={32}/></span>
             </div>
           </div>
-          <div className="relative py-8 pl-12 pr-10 w-7/12 rounded-md bg-lightModeBg dark:bg-darkBlue">
-            <div className="flex justify-between items-center">
-              <span className="text-2xl text-lightModeText dark:text-white">Filter by Region</span>
+          <div className="relative w-7/12 rounded-md bg-lightModeBg dark:bg-darkBlue transition-colors">
+            <div className="relative z-10 flex justify-between items-center py-8 pl-12 pr-10 cursor-pointer" onClick={(e)=> selectFilterBtn(e)}>
+              <span className="text-2xl text-lightModeText dark:text-white pointer-events-none">Filter by Region</span>
               <div className="w-4 h-4 border-t-4 border-r-4 rotate-[135deg] border-lightModeText dark:border-white"></div>
             </div>
-            <ul className="flex flex-col gap-4 py-8 w-full absolute top-full translate-y-2 left-0 bg-lightModeBg dark:bg-darkBlue z-10 rounded-md">
-              <li><p className="text-2xl text-lightModeText dark:text-white w-full pl-12">Africa</p></li>
-              <li><p className="text-2xl text-lightModeText dark:text-white w-full pl-12">America</p></li>
-              <li><p className="text-2xl text-lightModeText dark:text-white w-full pl-12">Asia</p></li>
-              <li><p className="text-2xl text-lightModeText dark:text-white w-full pl-12">Europe</p></li>
-              <li><p className="text-2xl text-lightModeText dark:text-white w-full pl-12">Oceania</p></li>
-            </ul>
+            <ul className="hidden flex-col gap-4 py-8 w-full absolute top-full translate-y-2 left-0 bg-lightModeBg dark:bg-darkBlue z-10 rounded-md transition-colors">
+              <li><p className="text-2xl text-lightModeText dark:text-white w-full pl-12 transition-colors">Africa</p></li>
+              <li><p className="text-2xl text-lightModeText dark:text-white w-full pl-12 transition-colors">America</p></li>
+              <li><p className="text-2xl text-lightModeText dark:text-white w-full pl-12 transition-colors">Asia</p></li>
+              <li><p className="text-2xl text-lightModeText dark:text-white w-full pl-12 transition-colors">Europe</p></li>
+              <li><p className="text-2xl text-lightModeText dark:text-white w-full pl-12 transition-colors">Oceania</p></li>
+          </ul>
           </div>
-
         </div>
       </section>
+
       <main className="w-8/12 mx-auto grid gap-[72px] md:container md:grid-cols-fluid md:w-full">
         {xd.map((item) => 
         <div key={item.name} className="grid grid-rows-[1fr] w-full rounded-md overflow-hidden">
