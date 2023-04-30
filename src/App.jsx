@@ -13,8 +13,8 @@ function App() {
   }
 
   return (
-    <div className="w-full">
-      <header className="bg-lightModeBg py-16 flex justify-center dark:bg-darkModeBg transition-colors">
+    <div className="w-full dark:bg-darkModeBg transition-colors">
+      <header className="bg-lightModeBg py-16 flex justify-center dark:bg-darkBlue transition-colors">
         <div className="container mx-6 flex justify-between items-center">
           <h2 className="text-lightModeText- text-lg font-semibold dark:text-white transition-colors">Where in the world?</h2>
           <section onClick={handleTheme} className="flex items-center gap-2 cursor-pointer">
@@ -34,7 +34,7 @@ function App() {
           <div className="relative px-1 pb-[60%]">
             <img src={item.flags.svg} alt="country-flag-img" className="absolute top-0 left-0 w-full h-full object-cover" />
           </div>
-          <div className="p-6 pb-11 flex flex-col gap-4 bg-lightModeBg shadow-xl">
+          <div className="p-6 pb-11 flex flex-col gap-4 bg-lightModeBg shadow-xl dark:bg-darkBlue dark:text-white transition-colors">
             <p className="">{item.name}</p>
             <div className="flex flex-col">
               <p>Population: {item.population}</p>
