@@ -6,7 +6,11 @@ export default {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'fluid': 'repeat(auto-fit, minmax(264px, 1fr))'
+      }
+    },
     colors: {
       darkBlue: 'hsl(209, 23%, 22%)',
       darkModeBg: 'hsl(207, 26%, 17%)',
