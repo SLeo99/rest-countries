@@ -28,7 +28,7 @@ function App() {
           </section>
         </div>
       </header>
-      <section className="w-8/12 mx-auto grid gap-[72px] sm:grid-cols-fluid 2xl:w-10/12">
+      <section className="w-8/12 mx-auto grid gap-[72px] sm:container sm:grid-cols-fluid sm:w-full">
         {xd.map((item) => 
         <div key={item.name} className="grid grid-rows-[1fr] w-full rounded-md overflow-hidden">
           <div className="relative px-1 pb-[60%]">

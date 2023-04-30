@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'fluid': 'repeat(auto-fit, minmax(264px, 1fr))'
+        'fluid': 'repeat(auto-fit, minmax(262px, 1fr))'
       }
     },
     colors: {
