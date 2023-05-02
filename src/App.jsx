@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { BsMoonFill, BsMoon } from "react-icons/bs";
-import xd from '../xd.json'
 import FilterSearch from "./components/FilterSearch";
+import CountriesCard from "./components/CountriesCard";
+import useFetch from "./hooks/useFetch";
 
 
 function App() {
-
   const [dark, setDark] = useState(false)
-
   function handleTheme() {
     setDark(!dark)
     document.documentElement.classList.toggle('dark')
   }
+
+  const ALL_COUNTRIES = 'https://restcountries.com/v3.1/all'
+  const data = useFetch(ALL_COUNTRIES)
+
 
   return (
     <div className="w-full dark:bg-darkModeBg transition-colors">
@@ -31,22 +34,10 @@ function App() {
         </div>
       </header>
       <FilterSearch />
-      <main className="w-8/12 mx-auto grid gap-[72px] md:container md:grid-cols-fluid md:w-full">
-        {xd.map((item) => 
-        <div key={item.name} className="grid grid-rows-[1fr] w-full rounded-md overflow-hidden">
-          <div className="relative px-1 pb-[60%]">
-            <img src={item.flags.svg} alt="country-flag-img" className="absolute top-0 left-0 w-full h-full object-cover" />
-          </div>
-          <div className="p-6 pb-11 flex flex-col gap-4 bg-lightModeBg shadow-xl dark:bg-darkBlue dark:text-white transition-colors">
-            <p className="">{item.name}</p>
-            <div className="flex flex-col">
-              <p>Population: {item.population}</p>
-              <p>Region: {item.region}</p>
-              <p>Capital: {item.capital}</p>
-            </div>
-          </div>
-        </div>
-        )}
+      <main className="w-8/12 mx-auto grid gap-[72px] md:container md:grid-cols-fluid md:w-full 2xl:max-w-[91.5%]">
+        {data.map((item, i) => (
+          <CountriesCard key={i} img={item.flags.svg} country={item.name.common} population={item.population} region={item.region} capital={item.capital}></CountriesCard>
+        ))}
       </main>
       
     </div>

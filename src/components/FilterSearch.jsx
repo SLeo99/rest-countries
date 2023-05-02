@@ -13,7 +13,7 @@ export default function FilterSearch() {
         <div className="relative flex flex-row-reverse rounded-md overflow-hidden">
           <input type="text" name="search" id="search" placeholder="Search for a country..." className="w-full outline-none border-0 py-8 pl-1 text-2xl text-lightModeText bg-lightModeBg dark:bg-darkBlue dark:text-white transition-colors" />
           <div className="flex items-center py-6 pl-16 pr-12 bg-lightModeBg dark:bg-darkBlue transition-colors">
-            <span className="text-lightModeText dark:text-white transition-colors"><BsSearch size={32}/></span>
+            <span className="text-3xl text-lightModeText dark:text-white transition-colors"><BsSearch /></span>
           </div>
         </div>
         <div className="relative w-7/12 rounded-md bg-lightModeBg dark:bg-darkBlue transition-colors">
