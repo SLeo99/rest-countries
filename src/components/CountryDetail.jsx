@@ -3,86 +3,77 @@ import { BsArrowLeft } from "react-icons/bs";
 export default function CountryDetail() {
   const arg = [
     {
-      "name": "Belgium",
-      "topLevelDomain": [".be"],
-      "alpha2Code": "BE",
-      "alpha3Code": "BEL",
-      "callingCodes": ["32"],
-      "capital": "Brussels",
-      "altSpellings": [
-        "BE",
-        "België",
-        "Belgie",
-        "Belgien",
-        "Belgique",
-        "Kingdom of Belgium",
-        "Koninkrijk België",
-        "Royaume de Belgique",
-        "Königreich Belgien"
-      ],
-      "subregion": "Western Europe",
-      "region": "Europe",
-      "population": 11555997,
-      "latlng": [50.83333333, 4],
-      "demonym": "Belgian",
-      "area": 30528,
-      "gini": 27.2,
-      "timezones": ["UTC+01:00"],
-      "borders": ["FRA", "DEU", "LUX", "NLD"],
-      "nativeName": "België",
-      "numericCode": "056",
+      "name": "Argentina",
+      "topLevelDomain": [".ar"],
+      "alpha2Code": "AR",
+      "alpha3Code": "ARG",
+      "callingCodes": ["54"],
+      "capital": "Buenos Aires",
+      "altSpellings": ["AR", "Argentine Republic", "República Argentina"],
+      "subregion": "South America",
+      "region": "Americas",
+      "population": 45376763,
+      "latlng": [-34, -64],
+      "demonym": "Argentinean",
+      "area": 2780400,
+      "gini": 42.9,
+      "timezones": ["UTC-03:00"],
+      "borders": ["BOL", "BRA", "CHL", "PRY", "URY"],
+      "nativeName": "Argentina",
+      "numericCode": "032",
       "flags": {
-        "svg": "https://flagcdn.com/be.svg",
-        "png": "https://flagcdn.com/w320/be.png"
+        "svg": "https://flagcdn.com/ar.svg",
+        "png": "https://flagcdn.com/w320/ar.png"
       },
       "currencies": [
         {
-          "code": "EUR",
-          "name": "Euro",
-          "symbol": "€"
+          "code": "ARS",
+          "name": "Argentine peso",
+          "symbol": "$"
         }
       ],
       "languages": [
         {
-          "iso639_1": "nl",
-          "iso639_2": "nld",
-          "name": "Dutch",
-          "nativeName": "Nederlands"
+          "iso639_1": "es",
+          "iso639_2": "spa",
+          "name": "Spanish",
+          "nativeName": "Español"
         },
         {
-          "iso639_1": "fr",
-          "iso639_2": "fra",
-          "name": "French",
-          "nativeName": "français"
-        },
-        {
-          "iso639_1": "de",
-          "iso639_2": "deu",
-          "name": "German",
-          "nativeName": "Deutsch"
+          "iso639_1": "gn",
+          "iso639_2": "grn",
+          "name": "Guaraní",
+          "nativeName": "Avañe'ẽ"
         }
       ],
       "translations": {
-        "br": "Belgia",
-        "pt": "Bélgica",
-        "nl": "België",
-        "hr": "Belgija",
-        "fa": "بلژیک",
-        "de": "Belgien",
-        "es": "Bélgica",
-        "fr": "Belgique",
-        "ja": "ベルギー",
-        "it": "Belgio",
-        "hu": "Belgium"
+        "br": "Arc'hantina",
+        "pt": "Argentina",
+        "nl": "Argentinië",
+        "hr": "Argentina",
+        "fa": "آرژانتین",
+        "de": "Argentinien",
+        "es": "Argentina",
+        "fr": "Argentine",
+        "ja": "アルゼンチン",
+        "it": "Argentina",
+        "hu": "Argentína"
       },
-      "flag": "https://flagcdn.com/be.svg",
+      "flag": "https://flagcdn.com/ar.svg",
       "regionalBlocs": [
         {
-          "acronym": "EU",
-          "name": "European Union"
+          "acronym": "USAN",
+          "name": "Union of South American Nations",
+          "otherAcronyms": ["UNASUR", "UNASUL", "UZAN"],
+          "otherNames": [
+            "Unión de Naciones Suramericanas",
+            "União de Nações Sul-Americanas",
+            "Unie van Zuid-Amerikaanse Naties",
+            "South American Union"
+          ]
         }
       ],
-      "cioc": "BEL",
+      "cioc": "ARG",
       "independent": true
     }
   ]
@@ -114,7 +105,7 @@ export default function CountryDetail() {
             </div>
             <article className="flex gap-4 text-lightModeText dark:text-white transition-colors">
               <span className="font-semibold">Border Countries: </span>
-              <ul className="flex gap-[10px]">{arg[0].borders.map((item,i) => <li key={i} className="w-[96px] bg-lightModeBg dark:bg-darkBlue transition-colors text-center py-[2px] rounded-sm">{item}</li>)}</ul>
+              <ul className="flex gap-[10px] flex-wrap">{arg[0].borders.map((item,i) => <li key={i} className="w-16 bg-lightModeBg dark:bg-darkBlue transition-colors text-center py-[2px] rounded-sm">{item}</li>)}</ul>
             </article>
           </div>
         </div>
