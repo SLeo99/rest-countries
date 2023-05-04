@@ -3,6 +3,7 @@ import { BsMoonFill, BsMoon } from "react-icons/bs";
 import FilterSearch from "./components/FilterSearch";
 import CountriesCard from "./components/CountriesCard";
 import useFetch from "./hooks/useFetch";
+import CountryDetail from "./components/CountryDetail";
 
 
 function App() {
@@ -19,26 +20,27 @@ function App() {
   return (
     <div className="w-full dark:bg-darkModeBg transition-colors">
       
-      <header className="bg-lightModeBg py-16 flex justify-center dark:bg-darkBlue transition-colors">
-        <div className="mx-6 flex justify-between sm:w-11/12 sm:mx-auto">
-          <h2 className="text-lightModeText sm:text-3xl tracking-tight font-semibold dark:text-white transition-colors">Where in the world?</h2>
-          <section onClick={handleTheme} className="flex items-center gap-2 sm:gap-5 cursor-pointer">
+      <header className="bg-lightModeBg py-16 flex dark:bg-darkBlue transition-colors xl:py-[24px]">
+        <div className="flex justify-between w-full mx-6 sm:w-11/12 sm:mx-auto xl:w-[88.75%]">
+          <h2 className="text-lightModeText sm:text-3xl xl:text-2xl xl:font-extrabold tracking-tight xl:tracking-normal font-semibold dark:text-white transition-colors">Where in the world?</h2>
+          <section onClick={handleTheme} className="flex items-center gap-2 sm:gap-5 xl:gap-2 cursor-pointer">
             {
             dark ? 
-            <span className="text-lightModeText dark:text-white transition-colors sm:text-2xl"><BsMoonFill /></span> 
+            <span className="text-lightModeText dark:text-white transition-colors sm:text-2xl xl:text-base"><BsMoonFill /></span> 
             : 
-            <span className="text-lightModeText dark:text-white transition-colors sm:text-2xl"><BsMoon /></span>
+            <span className="text-lightModeText dark:text-white transition-colors sm:text-2xl xl:text-base"><BsMoon /></span>
             }
-            <span className="text-lightModeText text-md font-semibold sm:text-2xl dark:text-white transition-colors">Dark Mode</span>
+            <span className="text-lightModeText text-md font-semibold sm:text-2xl xl:text-base dark:text-white transition-colors">Dark Mode</span>
           </section>
         </div>
       </header>
       <FilterSearch />
-      <main className="w-8/12 mx-auto grid gap-[72px] md:container md:grid-cols-fluid md:w-full 2xl:max-w-[91.5%]">
+      <main className="w-10/12 sm:w-[70.5%] mx-auto grid gap-[80px] xl:gap-[76px] xl:container lg:grid-cols-fluid xl:w-[88.75%]  2xl:max-w-[91.5%]">
         {data.map((item, i) => (
           <CountriesCard key={i} img={item.flags.svg} country={item.name.common} population={item.population} region={item.region} capital={item.capital}></CountriesCard>
         ))}
       </main>
+      {/* <CountryDetail /> */}
       
     </div>
   )
