@@ -18,7 +18,7 @@ function App() {
 
 
   return (
-    <div className="w-full dark:bg-darkModeBg transition-colors">
+    <div className="w-full">
       
       <header className="bg-lightModeBg py-16 flex dark:bg-darkBlue transition-colors xl:py-[24px]">
         <div className="flex justify-between w-full mx-6 sm:w-11/12 sm:mx-auto xl:w-[88.75%]">
@@ -34,13 +34,13 @@ function App() {
           </section>
         </div>
       </header>
-      <FilterSearch />
+      {/* <FilterSearch />
       <main className="w-10/12 sm:w-[70.5%] mx-auto grid gap-[80px] xl:gap-[76px] xl:container lg:grid-cols-fluid xl:w-[88.75%]  2xl:max-w-[91.5%]">
         {data.map((item, i) => (
           <CountriesCard key={i} img={item.flags.svg} country={item.name.common} population={item.population} region={item.region} capital={item.capital}></CountriesCard>
         ))}
-      </main>
-      {/* <CountryDetail /> */}
+      </main> */}
+      <CountryDetail />
       
     </div>
   )
