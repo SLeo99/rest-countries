@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-lightModeBg py-16 flex dark:bg-darkBlue transition-colors xl:py-[24px]">
+      <header className="bg-lightModeBg py-7 sm:py-[62px] flex dark:bg-darkBlue transition-colors xl:py-6">
         <div className="flex justify-between w-full mx-6 sm:w-11/12 sm:mx-auto xl:w-[88.75%]">
           <h2 className="text-lightModeText sm:text-3xl xl:text-2xl xl:font-extrabold tracking-tight xl:tracking-normal font-semibold dark:text-white transition-colors">Where in the world?</h2>
           <section onClick={handleTheme} className="flex items-center gap-2 sm:gap-5 xl:gap-2 cursor-pointer">
