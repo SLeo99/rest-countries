@@ -7,7 +7,7 @@ export default function useFetch(api) {
     fetch(api)
       .then((response) => response.json())
       .then((data) => setData(data))
-  }, [data])
+  }, [])
 
   return data;
   

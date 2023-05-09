@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'fluid': 'repeat(auto-fit, minmax(262px, 1fr))'
+        'fluid': 'repeat(auto-fill, minmax(262px, 1fr))'
       },
       colors: {
         darkBlue: 'hsl(209, 23%, 22%)',

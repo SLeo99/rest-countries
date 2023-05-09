@@ -7,18 +7,21 @@ import { useState } from "react";
 import useFetch from "./hooks/useFetch";
 
 
-
 function App() {
 
-  const [list,setList] = useState('')
+  const [array,setArray] = useState(null)
   const [country,setCountry] = useState([])
+  const [query, setQuery] = useState('')
 
   function handleFilter(e) {
-    setList(e)
+    setArray(e)
   }
-
   function handleCountry(e) {
     setCountry(e)
+  }
+  function handleSearch (e) {
+    setQuery(e)
+    setArray(null)
   }
 
   return (
@@ -30,10 +33,13 @@ function App() {
           <>
             <FilterSearch 
             handleFilter={handleFilter}
+            handleQuery={handleSearch}
+            query={query}
             />
             <CountriesList 
             // countrylink={handleCountry}
-            region={list}
+            region={array}
+            query={query}
             />
           </>
         }
