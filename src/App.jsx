@@ -10,7 +10,12 @@ import useFetch from "./hooks/useFetch";
 
 function App() {
 
-  const [country,setCountry] = useState(null)
+  const [list,setList] = useState('')
+  const [country,setCountry] = useState([])
+
+  function handleFilter(e) {
+    setList(e)
+  }
 
   function handleCountry(e) {
     setCountry(e)
@@ -23,9 +28,12 @@ function App() {
         <Route path='/' element=
         { 
           <>
-            <FilterSearch />
+            <FilterSearch 
+            handleFilter={handleFilter}
+            />
             <CountriesList 
-            countrylink={handleCountry}
+            // countrylink={handleCountry}
+            region={list}
             />
           </>
         }
