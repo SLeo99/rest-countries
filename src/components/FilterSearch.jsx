@@ -4,7 +4,6 @@ import { BsSearch } from "react-icons/bs";
 export default function FilterSearch({handleFilter, handleQuery, query}) {
 
   const [active, setActive] = useState(false)
-  // const dropdown = document.getElementById('dropdown')
 
   return (
     <section className="mx-auto mt-11 sm:mt-[48px] mb-16 xl:w-[97%] xl:my-12">
