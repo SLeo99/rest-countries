@@ -30,7 +30,7 @@ export default function CountriesList({region, query, handleCountry}) {
   }
 
   return (
-    <main className="w-10/12 sm:w-[70.5%] mb-16 xl:mb-12 mx-auto grid place-content-center gap-[79px] xl:gap-[4.75rem] xl:container xl:grid-cols-fluid xl:w-[88.75%] 2xl:max-w-[91.5%]">
+    <main className="w-10/12 sm:w-[70.5%] mb-16 xl:mb-12 mx-auto grid gap-[79px] xl:gap-[4.75rem] xl:container xl:grid-cols-fluid-xl xl:w-[88.75%] 2xl:max-w-[91.5%]">
       {region !== null ? 
         (
           renderCountries(regionFilter)

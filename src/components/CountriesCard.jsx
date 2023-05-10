@@ -1,6 +1,6 @@
 export default function CountriesCard({ img, country, population, region, capital }) {
   return (
-    <div className="flex flex-col rounded-md overflow-hidden">
+    <div className="flex flex-col rounded-md overflow-hidden w-full">
       <div className="relative pb-[60.75%] basis-1/2">
         <img src={img} alt={country} className="absolute top-0 left-0 w-full h-full object-cover" />
       </div>

@@ -9,3 +9,12 @@
 input {
   font-family: 'Nunito Sans', sans-serif;
 }
+
+@layer components {
+  .collapsed {
+    @apply hidden flex-col sm:gap-4 sm:py-8 w-full xl:gap-2 xl:py-4 absolute top-full translate-y-1 left-0 bg-lightModeBg dark:bg-darkBlue z-50 rounded-md transition-colors
+  }
+  .expanded {
+    @apply flex flex-col sm:gap-4 sm:py-8 w-full xl:gap-2 xl:py-4 absolute top-full translate-y-1 left-0 bg-lightModeBg dark:bg-darkBlue z-50 rounded-md transition-colors
+  }
+}
