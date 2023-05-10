@@ -14,7 +14,7 @@ export default function CountriesList({region, query, handleCountry}) {
       arr.map((item, i) => (
         <Link 
         key={i} 
-        to={item.name.common.toLowerCase().replace(/\s/g, '')}
+        to={`/${item.name.common}`}
         onClick={() => handleCountry(item)}
         >
           <CountriesCard 
