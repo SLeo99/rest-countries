@@ -4,13 +4,12 @@ import FilterSearch from "./components/FilterSearch";
 import CountriesList from "./components/CountriesList";
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import { useState } from "react";
-import useFetch from "./hooks/useFetch";
 
 
 function App() {
 
   const [array,setArray] = useState(null)
-  const [country,setCountry] = useState([])
+  const [country,setCountry] = useState(null)
   const [query, setQuery] = useState('')
 
   function handleFilter(e) {
@@ -37,9 +36,9 @@ function App() {
             query={query}
             />
             <CountriesList 
-            // countrylink={handleCountry}
             region={array}
             query={query}
+            handleCountry={handleCountry}
             />
           </>
         }
@@ -47,7 +46,7 @@ function App() {
         <Route path={`/:${country}`} element=
           {
           <CountryDetail 
-          countrydetails={country}/>
+          country={country}/>
           } 
         />
       </Routes>
