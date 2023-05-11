@@ -6,7 +6,7 @@ export default function CountriesList({region, query, handleCountry}) {
 
   const data = useFetch(`https://restcountries.com/v3.1/all`)
   const regionFilter = data.filter(item => item.region === region)
-  const searchedCountries = data.filter(item => item.name.common.toLowerCase().includes(query))
+  const searchedCountries = data.filter(item => item.name.common.toLowerCase().match(query))
 
 
   const renderCountries = (arr) => {

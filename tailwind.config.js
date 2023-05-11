@@ -9,7 +9,8 @@ export default {
     extend: {
       gridTemplateColumns: {
         'fluid': 'repeat(auto-fit, minmax(262px, 1fr))',
-        'fluid-xl': 'repeat(auto-fill, minmax(262px, 1fr))'
+        'fluid-xl': 'repeat(auto-fill, minmax(262px, 1fr))',
+        'fluid-borders': 'repeat(auto-fill, minmax(62px, 1fr))'
       },
       colors: {
         darkBlue: 'hsl(209, 23%, 22%)',

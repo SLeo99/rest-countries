@@ -2,21 +2,14 @@ import Header from "./components/Header";
 import CountryDetail from "./components/CountryDetail";
 import FilterSearch from "./components/FilterSearch";
 import CountriesList from "./components/CountriesList";
-import { Route, BrowserRouter, Routes, useParams } from 'react-router-dom'
+import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import { useState } from "react";
-// useParams
 
 function App() {
 
   const [array,setArray] = useState(null)
-  const [country,setCountry] = useState({})
+  const [country,setCountry] = useState()
   const [query, setQuery] = useState('')
-
-  // let { detailed } = useParams()
-
-  // console.log(detailed)
-
-  // console.log(country)
 
   function handleFilter(e) {
     setArray(e)
