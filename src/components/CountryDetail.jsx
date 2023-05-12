@@ -5,9 +5,9 @@ export default function CountryDetail({ country }) {
 
   return (
     <section className="w-[85%] xl:w-[89.75%] mx-auto my-10 sm:my-20 xl:my-20">
-      <Link to='/' className="flex items-center w-min gap-2 sm:gap-4 py-1 sm:py-[14px] xl:py-2 px-6 sm:px-11 xl:px-8 rounded-md mb-16 sm:mb-32 xl:mb-20 text-lightModeText dark:text-white bg-lightModeBg dark:bg-darkBlue transition-colors"><span className="text-lg sm:text-4xl xl:ml-2 xl:text-lg"><BsArrowLeft /></span><span className="font-semibold sm:text-3xl xl:text-base">Back</span></Link>
+      <Link to='/' className="flex items-center w-min gap-2 sm:gap-4 py-1 sm:py-[14px] xl:py-2 px-6 sm:px-11 xl:px-8 rounded-md mb-16 sm:mb-32 xl:mb-20 text-lightModeText dark:text-white bg-lightModeBg dark:bg-darkBlue transition-colors group/btn"><span className="text-lg sm:text-4xl xl:ml-2 xl:text-lg dark:group-hover/btn:text-emerald-300"><BsArrowLeft /></span><span className="font-semibold sm:text-3xl xl:text-base dark:group-hover/btn:text-emerald-300">Back</span></Link>
       <div className="flex flex-col gap-11 sm:gap-[102px] xl:gap-32 xl:flex-row xl:justify-between">
-        <div className="relative basis-1/2 pb-[72%] xl:pb-[31.05%]">
+        <div className="relative basis-1/2 pb-[72%] xl:pb-[31.05%] shadow-lightModeText/50 shadow-2xl">
             <img src={country.flags.svg} alt="" className="absolute top-0 left-0 w-full h-full object-cover"/>
         </div>
         <div className="flex flex-col justify-center basis-1/2 gap-10 xl:gap-[74px]">
@@ -23,7 +23,7 @@ export default function CountryDetail({ country }) {
               </ul>
               <ul className="flex flex-col gap-3 sm:gap-8 xl:gap-2 xl:basis-1/2">
                   <li><p className="text-sm sm:text-[28px] sm:leading-8 xl:text-base font-semibold">Top Level Domain: <span className="font-light">{country.tld[0]}</span></p></li>
-                  <li><p className="text-sm sm:text-[28px] sm:leading-8 xl:text-base font-semibold">Currencies: {Object.values(country.currencies).map((item,i) => <span className="font-light" key={i}>{item.name}</span>)}</p></li>
+                  <li><p className="text-sm sm:text-[28px] sm:leading-8 xl:text-base font-semibold">Currencies: {Object.values(country.currencies).map((item,i) => <span className="font-light" key={i}>{item.name}, </span>)}</p></li>
                   <li><p className="text-sm sm:text-[28px] sm:leading-8 xl:text-base font-semibold">Languages: <span>{Object.values(country.languages).map((item,i) => <span className="font-light" key={i}>{item}, </span>)}</span></p></li>
               </ul>                
             </div>
