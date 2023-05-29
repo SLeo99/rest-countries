@@ -25,31 +25,31 @@ export default function FilterSearch({handleFilter, handleQuery, query}) {
             <div className={!active ? 'unactiveArrow' : 'activeArrow'}></div>
           </div>
           <ul className={!active ? 'collapsed' : 'expanded'}>
-              <li className="xl:w-max group/li cursor-pointer"><p className="xl:inline text-lg sm:text-2xl py-6 px-3 lg:py-0 lg:p-0 xl:text-sm text-lightModeText dark:text-white w-full sm:pl-12 transition-colors dark:group-hover/li:bg-darkModeBg/30 xl:dark:group-hover/li:bg-transparent dark:group-hover/li:text-emerald-300" 
+              <li className="xl:w-max group/li cursor-pointer"><p className="xl:inline text-lg sm:text-2xl py-6 px-3 lg:py-0 lg:p-0 xl:text-sm text-lightModeText dark:text-white w-full sm:pl-12 transition-colors dark:group-hover/li:bg-darkModeBg/30 xl:dark:group-hover/li:bg-transparent dark:group-hover/li:text-emerald-300 cursor-pointer" 
               onClick={(e) => {
                 handleFilter(e.target.textContent)
                 setActive(false)
                 }
               }>Africa</p></li>
-              <li className="xl:w-max group/li cursor-pointer"><p className="xl:inline text-lg sm:text-2xl py-6 px-3 lg:py-0 lg:p-0 xl:text-sm text-lightModeText dark:text-white w-full sm:pl-12 transition-colors dark:group-hover/li:bg-darkModeBg/30 xl:dark:group-hover/li:bg-transparent dark:group-hover/li:text-emerald-300" 
+              <li className="xl:w-max group/li cursor-pointer"><p className="xl:inline text-lg sm:text-2xl py-6 px-3 lg:py-0 lg:p-0 xl:text-sm text-lightModeText dark:text-white w-full sm:pl-12 transition-colors dark:group-hover/li:bg-darkModeBg/30 xl:dark:group-hover/li:bg-transparent dark:group-hover/li:text-emerald-300 cursor-pointer" 
               onClick={(e) => {
                 handleFilter(e.target.textContent)
                 setActive(false)
                 }
               }>Americas</p></li>
-              <li className="xl:w-max group/li cursor-pointer"><p className="xl:inline text-lg sm:text-2xl py-6 px-3 lg:py-0 lg:p-0 xl:text-sm text-lightModeText dark:text-white w-full sm:pl-12 transition-colors dark:group-hover/li:bg-darkModeBg/30 xl:dark:group-hover/li:bg-transparent dark:group-hover/li:text-emerald-300" 
+              <li className="xl:w-max group/li cursor-pointer"><p className="xl:inline text-lg sm:text-2xl py-6 px-3 lg:py-0 lg:p-0 xl:text-sm text-lightModeText dark:text-white w-full sm:pl-12 transition-colors dark:group-hover/li:bg-darkModeBg/30 xl:dark:group-hover/li:bg-transparent dark:group-hover/li:text-emerald-300 cursor-pointer" 
               onClick={(e) => {
                 handleFilter(e.target.textContent)
                 setActive(false)
                 }
               }>Asia</p></li>
-              <li className="xl:w-max group/li cursor-pointer"><p className="xl:inline text-lg sm:text-2xl py-6 px-3 lg:py-0 lg:p-0 xl:text-sm text-lightModeText dark:text-white w-full sm:pl-12 transition-colors dark:group-hover/li:bg-darkModeBg/30 xl:dark:group-hover/li:bg-transparent dark:group-hover/li:text-emerald-300" 
+              <li className="xl:w-max group/li cursor-pointer"><p className="xl:inline text-lg sm:text-2xl py-6 px-3 lg:py-0 lg:p-0 xl:text-sm text-lightModeText dark:text-white w-full sm:pl-12 transition-colors dark:group-hover/li:bg-darkModeBg/30 xl:dark:group-hover/li:bg-transparent dark:group-hover/li:text-emerald-300 cursor-pointer" 
               onClick={(e) => {
                 handleFilter(e.target.textContent)
                 setActive(false)
                 }
               }>Europe</p></li>
-              <li className="xl:w-max group/li cursor-pointer"><p className="xl:inline text-lg sm:text-2xl py-6 px-3 lg:py-0 lg:p-0 xl:text-sm text-lightModeText dark:text-white w-full sm:pl-12 transition-colors dark:group-hover/li:bg-darkModeBg/30 xl:dark:group-hover/li:bg-transparent dark:group-hover/li:text-emerald-300" 
+              <li className="xl:w-max group/li cursor-pointer"><p className="xl:inline text-lg sm:text-2xl py-6 px-3 lg:py-0 lg:p-0 xl:text-sm text-lightModeText dark:text-white w-full sm:pl-12 transition-colors dark:group-hover/li:bg-darkModeBg/30 xl:dark:group-hover/li:bg-transparent dark:group-hover/li:text-emerald-300 cursor-pointer" 
               onClick={(e) => {
                 handleFilter(e.target.textContent)
                 setActive(false)
